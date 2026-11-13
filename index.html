@@ -1,0 +1,3964 @@
+<!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Terumo Corporation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Terumofavicon%20(2).png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Terumofavicon%20(2).png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Terumofavicon%20(2).png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Terumo Corporation">
+    <meta property="og:description"
+      content="A major Japanese medical device manufacturer whose products include catheters, cardiovascular systems, blood transfusion-related devices, and diabetes care solutions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://leybex385.github.io/TerumoCorporation/">
+    <meta property="og:image" content="https://leybex385.github.io/TerumoCorporation/terumopreview.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Terumo Corporation">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Terumo Corporation">
+    <meta name="twitter:description"
+      content="A major Japanese medical device manufacturer whose products include catheters, cardiovascular systems, blood transfusion-related devices, and diabetes care solutions.">
+    <meta name="twitter:image" content="https://leybex385.github.io/TerumoCorporation/terumopreview.png">
+
+    <style>
+      :root {
+        --bg: #f7f6f3;
+        --panel: #ffffff;
+        --dark: #111;
+        --text: #1c1c1c;
+        --muted: #6f6f6f;
+        --radius: 22px;
+        --shadow: 0 30px 80px rgba(0, 0, 0, .08);
+        --gap: 100px;
+      }
+
+      * {
+        box-sizing: border-box
+      }
+
+      body {
+        margin: 0;
+        font-family: Inter, system-ui;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.8;
+      }
+
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(16px) saturate(120%);
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+        z-index: 100;
+        transition: all 0.3s ease;
+      }
+
+      nav {
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .brand {
+        font-size: 12px;
+        letter-spacing: .18em;
+        text-transform: uppercase;
+      }
+
+      .menu a {
+        margin-left: 36px;
+        text-decoration: none;
+        color: #4b5563;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        transition: color 0.2s ease;
+      }
+
+      .menu a:hover {
+        color: #111827;
+      }
+
+      section {
+        padding: var(--gap) 0
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 32px;
+      }
+
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        padding-top: 140px;
+      }
+
+      .hero h1 {
+        font-family: Playfair Display, serif;
+        font-size: 56px;
+        font-weight: 500;
+        margin-bottom: 24px;
+      }
+
+      .hero p {
+        max-width: 640px;
+        font-size: 18px;
+        color: var(--muted);
+      }
+
+      .label {
+        font-size: 12px;
+        letter-spacing: .18em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 28px;
+      }
+
+      .panel {
+        background: var(--panel);
+        border-radius: var(--radius);
+        padding: 80px;
+        box-shadow: var(--shadow);
+      }
+
+      .split {
+        display: grid;
+        grid-template-columns: 1.2fr .8fr;
+        gap: 80px;
+      }
+
+      .dark {
+        background: var(--dark);
+        color: #e5e5e5;
+      }
+
+      .dark .panel {
+        background: #1b1b1b;
+        box-shadow: none;
+      }
+
+      .list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px 60px;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: .8s ease
+      }
+
+      .reveal.show {
+        opacity: 1;
+        transform: none
+      }
+
+      .footer {
+        background: #0b0f14;
+        color: #9ca3af;
+        text-align: center;
+        padding: 100px 80px;
+        font-size: 14px;
+      }
+
+      @media(max-width:900px) {
+        .hero h1 {
+          font-size: 40px
+        }
+
+        .split,
+        .list {
+          grid-template-columns: 1fr
+        }
+
+        .panel {
+          padding: 48px
+        }
+      }
+
+      .hero {
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      /* Background image */
+      .hero-bg {
+        position: absolute;
+        inset: 0;
+        background-image: url("heroclass.jpg");
+        background-size: cover;
+        /* landscape crop */
+        background-position: center;
+        /* balanced composition */
+        transform: scale(1.12);
+        /* avoids blur edges */
+        filter: blur(16px);
+        z-index: 1;
+      }
+
+      /* Dark overlay for contrast */
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 2;
+      }
+
+      /* Text content */
+      .hero-content {
+        position: relative;
+        z-index: 3;
+        max-width: 820px;
+        padding: 0 2rem;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .hero-content h1 {
+        font-size: clamp(3rem, 6vw, 4.5rem);
+        color: #fff;
+      }
+
+      .hero-content p {
+        margin-top: 1.5rem;
+        color: rgba(255, 255, 255, 0.85);
+        line-height: 1.7;
+        max-width: 720px;
+      }
+
+      .hero {
+        background-image: url("heroclass.jpg");
+        background-size: cover;
+        /* landscape crop */
+        background-position: center;
+        /* centered composition */
+        background-repeat: no-repeat;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Blur layer without affecting text */
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("heroclass.jpg");
+        background-size: cover;
+        background-position: center;
+        filter: blur(16px);
+        transform: scale(1.12);
+        /* prevents blur edges */
+        z-index: 0;
+      }
+
+      /* Optional dark overlay for readability */
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.35);
+        z-index: 1;
+      }
+
+      /* Ensure existing hero content stays on top */
+      .hero>* {
+        position: relative;
+        z-index: 2;
+      }
+
+      .hero {
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      /* Hide video visually but keep structure intact */
+
+      /* Blurred image background */
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("heroclass.jpg");
+        background-size: cover;
+        /* landscape fit */
+        background-position: center;
+        /* balanced crop */
+        background-repeat: no-repeat;
+        filter: blur(18px);
+        transform: scale(1.15);
+        /* prevents blur edges */
+        z-index: 0;
+      }
+
+      /* Dark overlay for text contrast */
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 1;
+      }
+
+      /* Keep content sharp */
+      .hero-content {
+        position: relative;
+        z-index: 2;
+      }
+
+      .hero {
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      /* Hide video but keep structure */
+
+      /* Blurred image background */
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("image/heroclass.jpg");
+        /* ← FIXED PATH */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: blur(18px);
+        transform: scale(1.15);
+        z-index: 0;
+      }
+
+      /* Overlay */
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 1;
+      }
+
+      /* Content stays sharp */
+      .hero-content {
+        position: relative;
+        z-index: 2;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("image/heroclass.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: blur(7px);
+        /* ← tuned blur */
+        transform: scale(1.08);
+        /* smaller scale for lighter blur */
+        z-index: 0;
+      }
+
+      /* ===== HERO PROFILE / ABOUT ===== */
+      .hero-profile {
+        background: #f7f8fa;
+        padding: 140px 0;
+      }
+
+      .hero-profile-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 60px;
+        display: grid;
+        grid-template-columns: 420px 1fr;
+        gap: 120px;
+        align-items: center;
+      }
+
+      /* Image */
+      .hero-profile-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 18px;
+        object-fit: cover;
+        background: #eee;
+      }
+
+      /* Content */
+      .hero-profile-content h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 42px;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        margin-bottom: 28px;
+        color: #111;
+      }
+
+      .hero-profile-content p {
+        font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        font-size: 17px;
+        line-height: 1.85;
+        color: #6b7280;
+        max-width: 560px;
+      }
+
+      /* ===== Responsive ===== */
+      @media (max-width: 900px) {
+        .hero-profile-inner {
+          grid-template-columns: 1fr;
+          gap: 60px;
+          padding: 0 28px;
+        }
+
+        .hero-profile-content h2 {
+          font-size: 34px;
+        }
+      }
+
+      .hero-family {
+        background: #f6f7f9;
+        padding: 120px 20px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .hero-family-card h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 24px;
+        font-weight: 500;
+        letter-spacing: 0.2px;
+        margin-bottom: 18px;
+        color: #1a1a1a;
+      }
+
+
+
+      .hero-family-card h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 44px;
+        font-weight: 600;
+        margin-bottom: 28px;
+        color: #1a1a1a;
+      }
+
+      .hero-family-card p {
+        font-family: "Inter", sans-serif;
+        font-size: 18px;
+        line-height: 1.9;
+        color: #6b7280;
+        max-width: 880px;
+      }
+
+      /* HERO FAMILY – Industry Perspective */
+      .hero-family {
+        padding: 120px 0;
+        background: #f5f6f8;
+      }
+
+      .hero-family-card {
+        max-width: 960px;
+        margin: 0 auto;
+        background: #ffffff;
+        padding: 64px 72px;
+        border-radius: 20px;
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+      }
+
+      /* Title — SAME size & font as About */
+      .hero-family-card h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 24px;
+        /* matches About */
+        font-weight: 500;
+        color: #1c1f26;
+        margin-bottom: 24px;
+      }
+
+      .hero-family-card h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 20px;
+        /* ⬅️ smaller, refined, section-label size */
+        font-weight: 500;
+        color: #1c1f26;
+        margin-bottom: 18px;
+      }
+
+      /* Body text */
+      .hero-family-card p {
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+        line-height: 1.8;
+        color: #6b7280;
+        max-width: 760px;
+      }
+
+      .hero-family-card h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 1.2;
+        margin-bottom: 16px;
+        color: #1a1a1a;
+      }
+
+      .hero-family-card p {
+        font-family: "Inter", sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.75;
+        color: #6b7280;
+        margin-top: 4px;
+      }
+
+      .section.reveal.show {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 120px 20px;
+      }
+
+      .focus-card {
+        background: #fbf7ef;
+        max-width: 820px;
+        padding: 64px 72px;
+        border-radius: 18px;
+        text-align: center;
+      }
+
+      .focus-card h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 34px;
+        font-weight: 600;
+        margin-bottom: 28px;
+        color: #1a1a1a;
+      }
+
+      .focus-card p {
+        font-family: "Inter", sans-serif;
+        font-size: 17px;
+        line-height: 1.8;
+        color: #555c66;
+      }
+
+      /* Professional Focus — huangshiyan.com match */
+
+      .section.reveal.show {
+        display: flex;
+        justify-content: center;
+        padding: 120px 24px;
+      }
+
+      .focus-card {
+        max-width: 760px;
+        background: #fbf7ef;
+        padding: 64px 72px;
+        border-radius: 18px;
+        text-align: center;
+      }
+
+      /* Title */
+      .focus-card h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 30px;
+        /* key match */
+        font-weight: 500;
+        /* lighter than before */
+        letter-spacing: 0.2px;
+        margin-bottom: 24px;
+        color: #1a1a1a;
+      }
+
+      /* Description */
+      .focus-card p {
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+        /* exact visual scale */
+        line-height: 1.85;
+        font-weight: 400;
+        color: #5a6270;
+      }
+
+      /* === Professional Focus (exact match) === */
+
+      .section.reveal.show {
+        position: relative;
+        padding: 140px 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .focus-card {
+        max-width: 820px;
+        background: #fbf7ef;
+        padding: 72px 80px;
+        border-radius: 22px;
+        text-align: center;
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.08);
+      }
+
+      /* Title */
+      .focus-card h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 32px;
+        /* exact visual size */
+        font-weight: 500;
+        letter-spacing: 0.3px;
+        margin-bottom: 28px;
+        color: #1c2230;
+      }
+
+      /* Description */
+      .focus-card p {
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+        line-height: 1.9;
+        font-weight: 400;
+        color: #5f6673;
+        max-width: 640px;
+        margin: 0 auto;
+      }
+
+      /* ===============================
+   SECTION HEADINGS (Unified)
+   =============================== */
+
+      /* Industry Perspective */
+      .hero-family-card h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 32px;
+        font-weight: 500;
+        letter-spacing: 0.2px;
+        margin-bottom: 20px;
+        color: #1a1a1a;
+      }
+
+      /* Professional Focus */
+      .reveal-show h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 32px;
+        /* same size as Industry Perspective */
+        font-weight: 500;
+        letter-spacing: 0.2px;
+        margin-bottom: 20px;
+        color: #1a1a1a;
+      }
+
+      /* ==================================================
+   FINAL OVERRIDES — DO NOT DUPLICATE ABOVE
+   ================================================== */
+
+      /* Industry Perspective */
+      .hero-family-card h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 32px;
+        font-weight: 500;
+        margin-bottom: 28px;
+        /* space before description */
+        color: #1a1a1a;
+      }
+
+      /* Professional Focus — MATCH Industry Perspective */
+      .focus-card h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 32px;
+        /* EXACT SAME SIZE */
+        font-weight: 500;
+        margin-bottom: 28px;
+        color: #1a1a1a;
+      }
+
+      /* ===== Background Narrative + Professional Experience ===== */
+
+      .background-section {
+        padding: 140px 32px;
+        background: #f5f6f8;
+      }
+
+      .background-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+      }
+
+      .background-card {
+        background: #ffffff;
+        padding: 72px 72px;
+        border-radius: 24px;
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.08);
+      }
+
+      .background-card h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 36px;
+        font-weight: 600;
+        margin-bottom: 28px;
+        color: #1a1a1a;
+      }
+
+      .background-card p {
+        font-family: "Inter", sans-serif;
+        font-size: 17px;
+        line-height: 1.9;
+        color: #6b7280;
+      }
+
+      /* Experience formatting */
+      .experience-item strong {
+        font-size: 16px;
+        color: #111;
+      }
+
+      .experience-period {
+        display: inline-block;
+        margin: 6px 0 14px;
+        color: #6b7280;
+        font-size: 14px;
+      }
+
+      /* Responsive */
+      @media (max-width: 900px) {
+        .background-grid {
+          grid-template-columns: 1fr;
+          gap: 48px;
+        }
+
+        .background-card {
+          padding: 48px;
+        }
+      }
+
+      /* ===============================
+   Education Section (huangshiyan style)
+   =============================== */
+
+      .education {
+        position: relative;
+        padding: 160px 24px;
+        background-image: url("image/education-bg.jpg");
+        /* same kind of flat-lay bg */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      /* Dark overlay */
+      .education::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45);
+        z-index: 0;
+      }
+
+      /* Title */
+      .education-title {
+        position: relative;
+        z-index: 1;
+        font-family: "Playfair Display", serif;
+        font-size: 42px;
+        font-weight: 500;
+        color: #ffffff;
+        max-width: 1200px;
+        margin: 0 auto 48px;
+        padding: 0 32px;
+      }
+
+      /* Card */
+      .education-card {
+        position: relative;
+        z-index: 1;
+        max-width: 820px;
+        margin: 0 auto;
+        background: #ffffff;
+        padding: 56px 64px;
+        border-radius: 22px;
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.18);
+      }
+
+      /* Text */
+      .education-card p {
+        font-family: "Inter", system-ui, sans-serif;
+        font-size: 18px;
+        line-height: 1.85;
+        color: #4b5563;
+        margin: 0;
+      }
+
+      /* Responsive */
+      @media (max-width: 900px) {
+        .education-title {
+          font-size: 32px;
+        }
+
+        .education-card {
+          padding: 40px 36px;
+        }
+
+        .education-card p {
+          font-size: 16px;
+        }
+      }
+
+      /* ===== Clinical Projects & Initiatives ===== */
+
+      .clinical-section {
+        background: #9b9b9b;
+        padding: 120px 7%;
+      }
+
+      .clinical-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        gap: 90px;
+        align-items: center;
+      }
+
+      /* IMAGE */
+      .clinical-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 28px;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* TEXT */
+      .clinical-text h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 3.4rem;
+        line-height: 1.1;
+        font-weight: 500;
+        margin-bottom: 34px;
+        color: #111;
+      }
+
+      .clinical-text p {
+        font-size: 1.05rem;
+        line-height: 1.9;
+        color: #2a2a2a;
+        margin-bottom: 24px;
+        max-width: 560px;
+      }
+
+      /* ===== Responsive ===== */
+      @media (max-width: 900px) {
+        .clinical-wrapper {
+          grid-template-columns: 1fr;
+          gap: 60px;
+        }
+
+        .clinical-text h2 {
+          font-size: 2.6rem;
+        }
+      }
+
+      .research-list {
+        list-style: disc;
+        padding-left: 20px;
+        max-width: 640px;
+        margin: 0 auto;
+        text-align: left;
+      }
+
+
+      .research-list li {
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+        line-height: 1.8;
+        color: #5f6673;
+        margin-bottom: 14px;
+      }
+
+      /* ===== Leadership & Board Roles ===== */
+
+      .leadership-section {
+        background: #e6e6e3;
+        /* soft gray like reference */
+        padding: 140px 7%;
+      }
+
+      .leadership-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        gap: 100px;
+        align-items: center;
+      }
+
+      /* Image */
+      .leadership-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 28px;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* Text */
+      .leadership-content h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 42px;
+        font-weight: 500;
+        margin-bottom: 32px;
+        color: #1a1a1a;
+      }
+
+      .leadership-content p {
+        font-family: "Inter", sans-serif;
+        font-size: 17px;
+        line-height: 1.9;
+        color: #5f6673;
+        max-width: 560px;
+      }
+
+      /* Responsive */
+      @media (max-width: 900px) {
+        .leadership-wrapper {
+          grid-template-columns: 1fr;
+          gap: 60px;
+        }
+
+        .leadership-content h2 {
+          font-size: 32px;
+        }
+      }
+
+      /* ===== Recognition ===== */
+
+      .recognition-section {
+        background: #ffffff;
+        padding: 160px 7%;
+      }
+
+      .recognition-container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .recognition-title {
+        font-family: "Playfair Display", serif;
+        font-size: 48px;
+        font-weight: 500;
+        margin-bottom: 120px;
+        color: #111111;
+        text-align: center;
+      }
+
+      /* Row */
+      .recognition-row {
+        display: flex;
+        align-items: center;
+        gap: 100px;
+        margin-bottom: 160px;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .recognition-section.reveal.show .recognition-row {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .recognition-row:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+
+      .recognition-text {
+        flex: 1;
+        padding: 48px;
+        background: #fcfcfc;
+        border: 1px solid #f0f0f0;
+        border-radius: 32px;
+        transition: all 0.4s ease;
+      }
+
+      .recognition-text:hover {
+        background: #ffffff;
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.05);
+        border-color: #e5e7eb;
+        transform: translateY(-5px);
+      }
+
+      .recognition-text h3 {
+        font-family: "Playfair Display", serif;
+        font-size: 28px;
+        font-weight: 500;
+        margin-bottom: 24px;
+        color: #111;
+        line-height: 1.3;
+      }
+
+      .recognition-text p {
+        font-family: "Inter", sans-serif;
+        font-size: 17px;
+        line-height: 1.8;
+        color: #4b5563;
+      }
+
+      .recognition-image {
+        flex: 1.2;
+        border-radius: 40px;
+        overflow: hidden;
+        box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1);
+        transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        background: #f3f4f6;
+        aspect-ratio: 16 / 10;
+        height: auto;
+      }
+
+      .recognition-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.8s ease;
+      }
+
+      .recognition-row:hover .recognition-image img {
+        transform: scale(1.05);
+      }
+
+      @media (max-width: 1024px) {
+
+        .recognition-row,
+        .recognition-row:nth-child(even) {
+          flex-direction: column;
+          gap: 40px;
+          margin-bottom: 100px;
+        }
+
+        .recognition-text {
+          padding: 32px;
+          order: 2;
+        }
+
+        .recognition-image {
+          width: 100%;
+          order: 1;
+        }
+      }
+
+
+      .recognition-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* 🔥 THIS fixes the stretching */
+        object-position: center;
+        /* keeps subject centered */
+        display: block;
+
+        /* image clarity */
+        image-rendering: auto;
+        transform: scale(1.01);
+        /* subtle sharpness boost */
+      }
+
+      /* ===== INSIGHTS GRID (EXACT LAYOUT) ===== */
+
+      /* ===== HERO INDUSTRY WOW (SINGLE CARD) ===== */
+      .hero-industry-wow {
+        padding: 200px 0; /* More breathing room */
+        background: #ffffff;
+        position: relative;
+        z-index: 10; /* Ensure it stays above the next section */
+      }
+
+      .hero-industry-wow::before {
+        content: "";
+        position: absolute;
+        top: -10%;
+        right: -10%;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(circle, rgba(110, 162, 255, 0.05) 0%, transparent 70%);
+        z-index: 0;
+      }
+
+      .hero-industry-wow .container {
+        max-width: 900px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+        padding: 0 40px;
+      }
+
+      .hero-industry-card {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 40px;
+        padding: 80px 60px;
+        text-align: center;
+        box-shadow: 0 30px 100px rgba(0, 0, 0, 0.04);
+      }
+
+      /* ===== INSIGHTS GRID (4 CARDS) ===== */
+      .insights-section {
+        padding: 180px 40px;
+        background: #f8fafc;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .insights-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 80px 60px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .insight-card {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        border-radius: 40px;
+        padding: 90px 50px 70px;
+        text-align: center;
+        position: relative;
+        box-shadow: 
+          0 10px 40px rgba(0, 0, 0, 0.02),
+          0 30px 100px rgba(110, 162, 255, 0.03);
+        transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .insight-card:hover {
+        transform: translateY(-15px);
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 
+          0 20px 60px rgba(0, 0, 0, 0.04),
+          0 50px 120px rgba(110, 162, 255, 0.08);
+      }
+
+      /* ICON FLOATING ABOVE */
+      .icon-circle {
+        width: 90px;
+        height: 90px;
+        background: #ffffff;
+        border: 1px solid rgba(110, 162, 255, 0.1);
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: -45px;
+        left: 50%;
+        transform: translateX(-50%);
+        box-shadow: 0 20px 40px rgba(110, 162, 255, 0.1);
+        transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .insight-card:hover .icon-circle {
+        transform: translateX(-50%) translateY(-10px) rotate(5deg);
+        background: #6ea2ff;
+        border-color: #6ea2ff;
+        box-shadow: 0 25px 50px rgba(110, 162, 255, 0.3);
+      }
+
+      .insight-card:hover .icon-circle svg {
+        stroke: #ffffff;
+      }
+
+      /* TYPOGRAPHY */
+      .insight-card h3 {
+        font-family: "Playfair Display", serif;
+        font-size: 30px;
+        font-weight: 500;
+        margin-bottom: 24px;
+        color: #111;
+      }
+
+      .insight-card p {
+        font-family: "Inter", sans-serif;
+        font-size: 17px;
+        line-height: 1.8;
+        color: #4b5563;
+      }
+
+      @media (max-width: 768px) {
+        .insights-grid {
+          grid-template-columns: 1fr;
+          gap: 80px;
+        }
+      }
+
+      /* CONTACT SECTION */
+
+
+      .contact-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+      }
+
+      .contact-info h2 {
+        font-size: 2.4rem;
+        margin-bottom: 30px;
+        color: #8ab4ff;
+      }
+
+      .contact-item {
+        margin-bottom: 30px;
+      }
+
+      .contact-item .label {
+        display: block;
+        font-size: 0.85rem;
+        letter-spacing: 1.5px;
+        color: #8ab4ff;
+        margin-bottom: 8px;
+      }
+
+      .contact-item p {
+        color: #d1d5db;
+        line-height: 1.6;
+        font-size: 0.95rem;
+      }
+
+      /* FORM */
+      .contact-form {
+        background: #1a1d23;
+        padding: 40px;
+        border-radius: 14px;
+      }
+
+      .contact-form label {
+        display: block;
+        margin-bottom: 6px;
+        color: #aeb4c0;
+        font-size: 0.9rem;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 14px;
+        margin-bottom: 20px;
+        background: #2a2e36;
+        border: none;
+        border-radius: 8px;
+        color: #fff;
+        font-size: 0.95rem;
+      }
+
+      .contact-form button {
+        width: 100%;
+        padding: 14px;
+        background: #2563eb;
+        border: none;
+        border-radius: 8px;
+        color: #fff;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+
+      .contact-form button:hover {
+        background: #1d4ed8;
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 900px) {
+        .contact-wrapper {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* ===== CONTACT SECTION ===== */
+
+      /* ===== CONTACT SECTION ===== */
+
+
+      .contact-container {
+        max-width: 1300px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        gap: 80px;
+      }
+
+      /* LEFT */
+      .contact-info h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 48px;
+        color: #6ea2ff;
+        margin-bottom: 40px;
+      }
+
+      .info-block {
+        margin-bottom: 28px;
+      }
+
+      .info-block .label {
+        display: block;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        color: #6ea2ff;
+        margin-bottom: 6px;
+      }
+
+      .info-block p {
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+        color: #ffffff;
+        line-height: 1.6;
+      }
+
+      /* MAP */
+      .map-wrapper {
+        margin-top: 32px;
+        border-radius: 14px;
+        overflow: hidden;
+      }
+
+      .map-wrapper iframe {
+        width: 100%;
+        height: 240px;
+        border: 0;
+      }
+
+      /* RIGHT CARD */
+      .contact-form-card {
+        background: #2a2b2f;
+        border-radius: 20px;
+        padding: 48px;
+      }
+
+      .contact-form-card label {
+        display: block;
+        font-size: 14px;
+        color: #cfcfcf;
+        margin-bottom: 6px;
+      }
+
+      .contact-form-card input,
+      .contact-form-card textarea {
+        width: 100%;
+        background: #3a3b40;
+        border: none;
+        border-radius: 10px;
+        padding: 14px 16px;
+        margin-bottom: 22px;
+        color: #fff;
+        font-size: 15px;
+      }
+
+      .contact-form-card input::placeholder,
+      .contact-form-card textarea::placeholder {
+        color: #9a9a9a;
+      }
+
+      .contact-form-card button {
+        width: 100%;
+        background: #2563eb;
+        border: none;
+        border-radius: 12px;
+        padding: 14px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      /* RESPONSIVE */
+
+      @media (max-width: 900px) {
+        .contact-container {
+          grid-template-columns: 1fr;
+        }
+
+        .contact-section {
+          padding: 80px 0 60px;
+        }
+      }
+
+      .contact-section {
+        background: #0f1013;
+        padding: 80px 0 60px;
+      }
+
+
+
+      /* Keep map light */
+      .map-wrapper,
+      .map-wrapper iframe {
+        background: #ffffff;
+      }
+
+      /* ===== Professional Focus – Light Image Background ===== */
+
+      .section.reveal.show {
+        position: relative;
+        padding: 160px 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /* Background image */
+        background-image: url("image/newprofess.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      /* Light overlay (keeps image visible) */
+      .section.reveal.show::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(255, 255, 255, 0.55);
+        /* ← light, airy */
+        z-index: 0;
+      }
+
+
+      /* Keep card above overlay */
+      .section.reveal.show .focus-card {
+        position: relative;
+        z-index: 1;
+      }
+
+      /* ===== Education – Soft Gray Editorial Look ===== */
+
+      .education {
+        position: relative;
+        padding: 160px 24px;
+
+        background-image: url("image/education.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      /* Soft gray veil (NOT white, NOT dark) */
+      .education::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(235, 236, 238, 0.65);
+        /* 👈 key part */
+        z-index: 0;
+      }
+
+      /* Keep content above overlay */
+      .education>* {
+        position: relative;
+        z-index: 1;
+      }
+
+      /* Optional: soften the card slightly to match reference */
+      .education-card {
+        background: rgba(255, 255, 255, 0.96);
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.12);
+      }
+
+      /* ===== Education – Soft Black Editorial Overlay ===== */
+
+      .education {
+        position: relative;
+        padding: 160px 24px;
+
+        background-image: url("image/education.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      /* Soft black veil (key difference) */
+      .education::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+
+        /* 👇 THIS is the exact look */
+        background: rgba(15, 17, 21, 0.55);
+
+        z-index: 0;
+      }
+
+      /* Keep content above overlay */
+      .education>* {
+        position: relative;
+        z-index: 1;
+      }
+
+      /* Card refinement (matches reference softness) */
+      .education-card {
+        background: rgba(255, 255, 255, 0.96);
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.18);
+      }
+
+      /* Title readability */
+      .education-title {
+        color: #ffffff;
+      }
+
+      /* ===== Professional Focus – Background Image (ONLY this section) ===== */
+
+      #professional.section.reveal {
+        position: relative;
+        padding: 160px 24px;
+
+        background-image: url("image/newprofess.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      /* Soft black overlay (editorial, not dark) */
+      #professional.section.reveal::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+
+        background: rgba(15, 17, 21, 0.5);
+
+        z-index: 0;
+      }
+
+      /* Keep content above overlay */
+      #professional.section.reveal>* {
+        position: relative;
+        z-index: 1;
+      }
+
+      /* ===== Professional Focus background ===== */
+      .section.reveal.professional {
+        position: relative;
+        padding: 160px 24px;
+
+        background-image: url("image/newprofess.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      /* FIX: Professional Focus card background to white */
+      .section.reveal.professional .focus-card {
+        background: #ffffff !important;
+      }
+
+      /* Soft black overlay */
+      .section.reveal.professional::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(15, 17, 21, 0.5);
+        z-index: 0;
+      }
+
+      /* Keep card above overlay */
+      .section.reveal.professional>* {
+        position: relative;
+        z-index: 1;
+      }
+
+      /* ================================
+   Selected Publications & Research
+   (huangshiyan.com-inspired layout)
+================================ */
+
+      .section.publications {
+        background: #f5f6f7;
+        /* soft light gray page background */
+        padding: 120px 24px;
+      }
+
+      .section.publications .focus-card {
+        max-width: 1100px;
+        margin: 0 auto;
+
+        background: #ffffff;
+        border-radius: 28px;
+        padding: 64px 72px;
+
+        box-shadow:
+          0 40px 80px rgba(0, 0, 0, 0.08);
+
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      /* Title */
+      .section.publications h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 2.6rem;
+        font-weight: 500;
+        color: #111;
+
+        margin-bottom: 32px;
+      }
+
+      /* Research list */
+      .section.publications .research-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .section.publications .research-list li {
+        position: relative;
+        padding-left: 22px;
+        margin-bottom: 20px;
+
+        font-family: "Inter", sans-serif;
+        font-size: 1.05rem;
+        line-height: 1.75;
+        color: #4b5563;
+      }
+
+      /* Elegant bullet like huangshiyan.com */
+      .section.publications .research-list li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        top: 0.15em;
+
+        font-size: 1.4rem;
+        color: #9ca3af;
+      }
+
+      /* ================================
+   Selected Publications & Research
+   (huangshiyan.com-inspired layout)
+================================ */
+
+
+      .section.publications {
+        background: #f5f6f7;
+        /* soft light gray page background */
+        padding: 120px 24px;
+      }
+
+      .section.publications .focus-card {
+        max-width: 1100px;
+        margin: 0 auto;
+
+        background: #ffffff;
+        border-radius: 28px;
+        padding: 64px 72px;
+
+        box-shadow:
+          0 40px 80px rgba(0, 0, 0, 0.08);
+
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      /* Title */
+      .section.publications h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 2.6rem;
+        font-weight: 500;
+        color: #111;
+
+        margin-bottom: 32px;
+      }
+
+      /* Research list */
+      .section.publications .research-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .section.publications .research-list li {
+        position: relative;
+        padding-left: 22px;
+        margin-bottom: 20px;
+
+        font-family: "Inter", sans-serif;
+        font-size: 1.05rem;
+        line-height: 1.75;
+        color: #4b5563;
+      }
+
+      /* Elegant bullet like huangshiyan.com */
+      .section.publications .research-list li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        top: 0.15em;
+
+        font-size: 1.4rem;
+        color: #9ca3af;
+      }
+
+      /* Mobile styles for Selected Publications & Research */
+      @media (max-width: 900px) {
+        .section.publications {
+          padding: 80px 16px;
+        }
+
+        .section.publications .focus-card {
+          padding: 40px 28px;
+        }
+
+        .section.publications h2 {
+          font-size: 2.1rem;
+        }
+      }
+
+      /* Selected Publications & Research layout */
+      .section.publications {
+        background: #f4f5f7;
+        padding: 120px 0;
+      }
+
+      .section.publications .focus-card {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 60px;
+        align-items: center;
+
+        background: white;
+        border-radius: 24px;
+        padding: 64px;
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.12);
+      }
+
+      /* Text spacing */
+      .section.publications h2 {
+        margin-bottom: 24px;
+      }
+
+      .section.publications ul {
+        padding-left: 20px;
+      }
+
+      .section.publications li {
+        margin-bottom: 18px;
+        line-height: 1.7;
+      }
+
+      /* Publications section background */
+      .section.publications {
+        background: #f4f5f7;
+        padding: 120px 0;
+      }
+
+      /* Card layout */
+      .publications-layout {
+        max-width: 1100px;
+        margin: 0 auto;
+
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 56px;
+        align-items: center;
+
+        background: #ffffff;
+        border-radius: 24px;
+        padding: 64px;
+
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.12);
+      }
+
+      /* Text side */
+      .publications-text h2 {
+        margin-bottom: 28px;
+      }
+
+      .research-list {
+        padding-left: 18px;
+      }
+
+      .research-list li {
+        margin-bottom: 18px;
+        line-height: 1.65;
+        color: #555;
+      }
+
+      /* Image side */
+      .publications-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 16px;
+        object-fit: cover;
+      }
+
+      /* Remove or reset the background-image property */
+      .publications-layout {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 56px;
+        align-items: center;
+
+        background: #ffffff;
+        /* Update this line to remove image background */
+        padding: 64px;
+
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.12);
+      }
+
+      /* FORCE white background for Selected Publications */
+      .publications-section {
+        background: #ffffff !important;
+        background-image: none !important;
+      }
+
+      /* Global Base */
+      html {
+        font-size: 18px;
+        /* critical: huangshiyan.com base size */
+      }
+
+      /* Body Text */
+      body {
+        font-size: 1rem;
+        /* 18px */
+        line-height: 1.7;
+      }
+
+      /* Headings (Editorial Scale) */
+      h1 {
+        font-size: 3.25rem;
+        /* ~58–60px */
+        line-height: 1.15;
+      }
+
+      h2 {
+        font-size: 2.4rem;
+        /* ~43px */
+        line-height: 1.25;
+      }
+
+      h3 {
+        font-size: 1.75rem;
+        /* ~31px */
+        line-height: 1.3;
+      }
+
+      h4 {
+        font-size: 1.3rem;
+        /* ~23px */
+      }
+
+      h5 {
+        font-size: 1.1rem;
+        /* ~20px */
+      }
+
+      /* Paragraphs & Lists */
+      p,
+      li {
+        font-size: 1rem;
+        /* 18px */
+        line-height: 1.75;
+      }
+
+      /* Small / Meta Text */
+      small,
+      .meta,
+      .caption {
+        font-size: 0.85rem;
+        /* ~15px */
+      }
+
+      /* Buttons / Nav / Links */
+      /* ================================
+   INDUSTRY PERSPECTIVE (HERO)
+================================ */
+
+      .hero-industry {
+        padding: 120px 0;
+        background: #f5f6f8;
+      }
+
+
+      .hero-industry-card {
+        max-width: 960px;
+        margin: 0 auto;
+        background: #ffffff;
+        padding: 64px 72px;
+        border-radius: 20px;
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+      }
+
+      /* Title */
+      .hero-industry-card h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 1.2;
+        color: #1a1a1a;
+        margin-bottom: 16px;
+      }
+
+      /* Body text */
+      .hero-industry-card p {
+        font-family: "Inter", sans-serif;
+        font-size: 18px;
+        line-height: 1.9;
+        color: #6b7280;
+        max-width: 880px;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .site-footer {
+        background: #0b0f14;
+        color: #9ca3af;
+        text-align: center;
+        padding: 48px 16px;
+        font-size: 14px;
+      }
+
+      /* =====================================================
+   HERO FINAL CLEAN FIX — DO NOT DUPLICATE ABOVE
+   ===================================================== */
+
+      /* 1️⃣ 完全禁用 hero 的所有图片背景 & 伪元素 */
+      .hero,
+      .hero::before,
+      .hero::after {
+        background: none !important;
+        background-image: none !important;
+        content: none !important;
+      }
+
+      /* 2️⃣ Video 永远在最底层 */
+      .hero-video {
+        display: block !important;
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        min-width: 100% !important;
+        min-height: 100% !important;
+        transform: translate(-50%, -50%) !important;
+        object-fit: cover !important;
+        z-index: 0 !important;
+      }
+
+      /* 3️⃣ 遮罩在 video 上 */
+      .hero-overlay {
+        position: absolute !important;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45);
+        z-index: 1 !important;
+      }
+
+      /* 4️⃣ 文字永远在最上层（硬锁） */
+      .hero-content {
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        z-index: 10 !important;
+        width: 100%;
+        max-width: 1200px;
+        padding: 0 32px;
+      }
+    </style>
+  </head>
+
+  <header>
+    <nav>
+      <div class="brand">
+        <a href="/" style="text-decoration: none; display: flex; align-items: center; gap: 12px;">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="32" height="32" rx="6" fill="#111827" />
+            <path d="M16 9V23M9 16H23" stroke="white" stroke-width="3.5" stroke-linecap="round" />
+          </svg>
+          <span
+            style="font-family: 'Inter', sans-serif; font-size: 22px; font-weight: 700; color: #111; letter-spacing: 1.5px; text-transform: uppercase;">Terumo</span>
+        </a>
+      </div>
+
+      <!-- Hamburger Menu Icon -->
+      <div class="menu-icon" id="menu-icon">
+        &#9776; <!-- This is the hamburger icon -->
+      </div>
+
+      <div class="menu">
+        <a href="#about">About</a>
+        <a href="#professional">Professional Focus</a>
+        <a href="#education">Education</a>
+        <a href="#recognition">Recognition</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+
+
+    </nav>
+  </header>
+
+  <!-- Add CSS for the hamburger menu -->
+  <style>
+    /* Default state - hide the menu on small screens */
+    .menu {
+      display: flex;
+    }
+
+    .menu a {
+      margin-left: 32px;
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .menu-icon {
+      display: none;
+      cursor: pointer;
+    }
+
+    /* Make the menu hidden by default on mobile */
+    @media (max-width: 900px) {
+      .menu {
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+
+        background: rgba(247, 246, 243, 0.96);
+        backdrop-filter: blur(14px);
+
+        /* 默认关闭 */
+        opacity: 0;
+        transform: translateY(-12px);
+        pointer-events: none;
+
+        transition: opacity 0.28s ease, transform 0.28s ease;
+      }
+
+      .menu.menu-open {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+
+      .menu a {
+        margin: 20px;
+        font-size: 18px;
+      }
+
+      .menu-icon {
+        display: block;
+        font-size: 30px;
+      }
+    }
+
+    /* ===== FADE IN ON SCROLL ===== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .site-footer {
+      margin-top: auto;
+      background: #0b0c0f;
+      padding: 28px 0;
+      text-align: center;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.55);
+    }
+
+    .contact-section {
+      background: #0f1013;
+      padding: 80px 0 120px;
+      margin-bottom: 120px;
+      /* ← THIS LINE ENDS THE CONTACT VISUALLY */
+    }
+
+    .site-footer {
+      background: #ffffff;
+      color: #111;
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    /* ===== TEAM SECTION ===== */
+    .key-figures-section {
+      padding: 160px 7%;
+      background: #ffffff;
+    }
+
+    .key-figures-title {
+      font-family: "Playfair Display", serif;
+      font-size: 48px;
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 120px;
+    }
+
+    .key-figure.primary {
+      display: grid;
+      grid-template-columns: 420px 1fr;
+      gap: 100px;
+      align-items: center;
+      margin-bottom: 140px;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .key-figure.primary img {
+      width: 100%;
+      height: 580px;
+      object-fit: cover;
+      border-radius: 40px;
+      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1);
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .key-figure.primary:hover img {
+      transform: scale(1.02);
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .key-figure.secondary {
+      display: flex;
+      flex-direction: column;
+      background: #fcfcfc;
+      border: 1px solid #f0f0f0;
+      border-radius: 32px;
+      padding: 40px;
+      transition: all 0.4s ease;
+    }
+
+    .key-figure.secondary:hover {
+      background: #ffffff;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.05);
+      transform: translateY(-10px);
+      border-color: #e5e7eb;
+    }
+
+    .key-figure.secondary img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      border-radius: 24px;
+      margin-bottom: 32px;
+    }
+
+    .figure-content h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 30px;
+      font-weight: 500;
+      margin-bottom: 12px;
+      color: #111;
+    }
+
+    .figure-content .role {
+      font-size: 13px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #374151;
+      font-weight: 700;
+      margin-bottom: 24px;
+      display: block;
+    }
+
+    .figure-content .bio {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #4b5563;
+    }
+
+    @media (max-width: 1024px) {
+      .key-figure.primary {
+        grid-template-columns: 1fr;
+        gap: 48px;
+        text-align: center;
+      }
+
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .products-section {
+      padding: 160px 24px;
+      background: #ffffff;
+    }
+
+    .products-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .products-title {
+      text-align: center;
+      font-family: "Playfair Display", serif;
+      font-size: 36px;
+      margin-bottom: 80px;
+    }
+
+    .products-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 32px;
+    }
+
+    .product-card {
+      width: calc(25% - 24px);
+      cursor: pointer;
+      text-align: center;
+      background: #ffffff;
+      border: 1px solid #eaeaea;
+      border-radius: 16px;
+      padding: 32px 16px 24px;
+      transition: all 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.06);
+      border-color: #d1d5db;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: contain;
+      background: transparent;
+      margin-bottom: 24px;
+    }
+
+    .product-card h3 {
+      margin-top: 0;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.4;
+      color: #111827;
+      padding: 0 8px;
+    }
+
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .product-card {
+        width: calc(50% - 16px);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .product-card {
+        width: 100%;
+      }
+    }
+
+    .product-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .product-modal.show {
+      display: flex;
+    }
+
+    .modal-content {
+      background: #fff;
+      max-width: 860px;
+      width: 92%;
+      max-height: 90vh;
+      /* KEY */
+      overflow-y: auto;
+      /* KEY */
+      padding: 36px;
+      border-radius: 20px;
+      position: relative;
+      text-align: left;
+      /* better for long text */
+    }
+
+    .modal-main-image {
+      width: 100%;
+      height: 300px;
+      object-fit: contain;
+      background: #f5f7fa;
+      border-radius: 12px;
+    }
+
+    .modal-gallery {
+      display: flex;
+      gap: 12px;
+      margin-top: 20px;
+      justify-content: center;
+    }
+
+    .modal-gallery img {
+      width: 90px;
+      height: 90px;
+      object-fit: contain;
+      cursor: pointer;
+      background: #f5f7fa;
+      border-radius: 10px;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    #modalTitle {
+      font-size: 22px;
+      font-weight: 600;
+      margin: 24px 0 12px;
+      line-height: 1.3;
+      color: #111827;
+    }
+
+    #modalDesc {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #4b5563;
+      margin-bottom: 28px;
+      white-space: normal;
+    }
+
+    /* ===============================
+   GLOBAL CONTENT IMAGE SAFETY
+================================ */
+
+    section:not(.products-section) img {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      object-fit: cover;
+      background: none;
+    }
+
+    /* ===============================
+   CONTACT SECTION LAYOUT
+================================ */
+
+    .contact-section {
+      padding: 80px 6%;
+    }
+
+    .contact-container {
+      display: flex;
+      align-items: flex-start;
+      gap: 60px;
+    }
+
+    /* LEFT: info + map */
+    .contact-left {
+      flex: 1;
+      min-width: 0;
+    }
+
+    /* RIGHT: form */
+    .contact-right {
+      flex: 1;
+      min-width: 0;
+    }
+
+    /* MAP */
+    .contact-left iframe {
+      width: 100%;
+      height: 300px;
+      border-radius: 14px;
+      border: none;
+      margin-top: 32px;
+    }
+
+    @media (max-width: 900px) {
+      .contact-container {
+        flex-direction: column;
+        gap: 40px;
+      }
+    }
+
+    /* ===============================
+   CONTACT SECTION LAYOUT FIX
+================================ */
+
+    .contact-section {
+      padding: 100px 24px;
+    }
+
+    .contact-container {
+      max-width: 1200px;
+      margin: 0 auto;
+
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 64px;
+    }
+
+    /* LEFT */
+    .contact-info {
+      flex: 1;
+      max-width: 520px;
+    }
+
+    /* RIGHT */
+    .contact-form-card {
+      flex: 1;
+      max-width: 480px;
+    }
+
+    @media (max-width: 900px) {
+      .contact-container {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .contact-form-card,
+      .contact-info {
+        max-width: 100%;
+      }
+    }
+
+    /* ===============================
+   KEY FIGURES – PORTRAIT FIX
+   (ISOLATED – SAFE)
+================================ */
+
+    .key-figures-section .key-figure-card img {
+      width: 100%;
+      height: 420px;
+      /* uniform height */
+      object-fit: cover;
+      /* fills frame */
+      object-position: center top;
+      /* keeps faces visible */
+      border-radius: 18px;
+      display: block;
+    }
+
+    .key-figures-section .key-figure-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* ===============================
+   KEY FIGURES – DESCRIPTION TEXT
+================================ */
+
+    .key-figures-section .figure-desc {
+      margin-top: 10px;
+      font-size: 14.5px;
+      line-height: 1.6;
+      color: #6b7280;
+      /* soft gray */
+      text-align: center;
+      max-width: 260px;
+      /* keeps it tidy */
+    }
+
+    .figure-title {
+      font-weight: 600;
+      color: #1f3a5f;
+      /* professional dark blue */
+    }
+
+    /* ===== BLOG SECTION ===== */
+
+    .blog-section {
+      background: #f5f6f8;
+      padding: 140px 24px;
+    }
+
+    .blog-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .blog-title {
+      font-family: "Playfair Display", serif;
+      font-size: 42px;
+      font-weight: 500;
+      margin-bottom: 80px;
+      color: #1a1a1a;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+    }
+
+    .blog-card {
+      background: #ffffff;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.08);
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 36px 80px rgba(0, 0, 0, 0.12);
+    }
+
+    .blog-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .blog-content {
+      padding: 28px 28px 34px;
+    }
+
+    .blog-meta {
+      font-family: "Inter", sans-serif;
+      font-size: 12px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #6b7280;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .blog-content h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.35;
+      margin-bottom: 14px;
+      color: #1a1a1a;
+    }
+
+    .blog-content p {
+      font-family: "Inter", sans-serif;
+      font-size: 15px;
+      line-height: 1.75;
+      color: #5f6673;
+    }
+
+    /* REMOVE UNDERLINES GLOBALLY INSIDE BLOG */
+    .blog-section a,
+    .blog-section a:hover {
+      text-decoration: none;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1100px) {
+      .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .blog-link {
+      display: block;
+      color: inherit;
+    }
+
+    .blog-card img {
+      transition: transform .6s ease;
+    }
+
+    .blog-card:hover img {
+      transform: scale(1.08);
+    }
+
+    /* ===== BLOG SECTION ===== */
+
+    .blog-section {
+      background: #f5f6f8;
+      padding: 140px 24px;
+    }
+
+    .blog-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .blog-title {
+      font-family: "Playfair Display", serif;
+      font-size: 42px;
+      font-weight: 500;
+      margin-bottom: 80px;
+      color: #1a1a1a;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+    }
+
+    /* Clickable wrapper */
+    .blog-link {
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+    }
+
+    /* Card */
+    .blog-card {
+      background: #ffffff;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.08);
+      transition: transform .3s ease, box-shadow .3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 36px 80px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Image */
+    .blog-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform .6s ease;
+    }
+
+    .blog-card:hover img {
+      transform: scale(1.08);
+    }
+
+    /* Content */
+    .blog-content {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .blog-meta {
+      font-family: "Inter", sans-serif;
+      font-size: 12px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: #6b7280;
+      margin-bottom: 12px;
+    }
+
+    /* Title — safe for long text */
+    .blog-content h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.35;
+      margin-bottom: 14px;
+      color: #1a1a1a;
+      min-height: 3.2em;
+      /* keeps alignment */
+    }
+
+    /* Description — flexible length */
+    .blog-content p {
+      font-family: "Inter", sans-serif;
+      font-size: 15px;
+      line-height: 1.75;
+      color: #5f6673;
+      flex-grow: 1;
+    }
+
+    /* Remove underline everywhere */
+    .blog-section a {
+      text-decoration: none;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1100px) {
+      .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .blog-section {
+      padding: 80px 6%;
+      background: #f9fafb;
+    }
+
+    .blog-title {
+      font-size: 38px;
+      margin-bottom: 50px;
+      font-family: serif;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+    }
+
+    .blog-card {
+      background: #fff;
+      border-radius: 22px;
+      overflow: hidden;
+      text-decoration: none;
+      color: #111;
+      box-shadow: 0 25px 40px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 35px 55px rgba(0, 0, 0, 0.12);
+    }
+
+    /* BIGGER IMAGE */
+    .blog-card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
+
+    /* TEXT AREA */
+    .blog-content {
+      padding: 24px;
+    }
+
+    .blog-content h3 {
+      font-size: 16px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .blog-content p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:1200px) {
+      .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media(max-width:600px) {
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .page-layout {
+      display: grid;
+      grid-template-columns: 2.5fr 1fr;
+      gap: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .sidebar-box {
+      background: #f8fafc;
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    .sidebar-box h3 {
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+
+    .latest-post {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+      cursor: pointer;
+    }
+
+    .latest-post img {
+      width: 60px;
+      height: 60px;
+      border-radius: 6px;
+      object-fit: cover;
+    }
+
+    .latest-post a {
+      text-decoration: none;
+      color: #111;
+      font-size: 14px;
+    }
+
+    .latest-post span {
+      display: block;
+      font-size: 12px;
+      color: #777;
+    }
+
+    header nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      flex-shrink: 0;
+      /* logo will never collapse */
+    }
+
+    .brand img {
+      height: 76px;
+      /* slightly bigger than now */
+      width: auto;
+      max-width: 300px;
+      display: block;
+    }
+
+    .brand img {
+      filter: brightness(0.35) contrast(1.25);
+    }
+
+
+    @media (max-width: 768px) {
+      .brand img {
+        height: 50px;
+        max-width: 200px;
+      }
+    }
+
+
+    .menu {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .brand img {
+      filter: brightness(0.28) contrast(1.3) drop-shadow(0 1px 2px rgba(0, 0, 0, 0.25));
+    }
+
+    header nav {
+      padding: 20px 32px;
+    }
+
+    header nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .blog-title,
+    .insight-card h3 {
+      text-transform: none;
+      letter-spacing: normal;
+      font-weight: 500;
+    }
+
+    .blog-content h3 {
+      text-transform: none;
+      letter-spacing: normal;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    .blog-date {
+      display: block;
+      font-size: 0.85rem;
+      color: #8a8f98;
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+
+    /* ===== HERO VIDEO FIX ===== */
+    .hero {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .hero-video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* ===== HERO VIDEO FORCE OVERRIDE (NO DELETE) ===== */
+    /* ===== HERO TEXT HARD FIX (FINAL) ===== */
+
+    .hero {
+      display: block !important;
+    }
+
+    .hero-content {
+      position: absolute !important;
+      top: 50% !important;
+      left: 50% !important;
+      transform: translate(-50%, -50%) !important;
+
+      z-index: 10 !important;
+
+      width: 100%;
+      max-width: 1200px;
+      padding: 0 32px;
+    }
+
+    .hero-content h1,
+    .hero-content p {
+      text-align: left;
+    }
+
+
+    /* 1. 强制关闭 hero 的图片背景层 */
+    .hero::before,
+    .hero::after {
+      display: none !important;
+      content: none !important;
+    }
+
+    /* 2. 强制显示视频 */
+    .hero-video {
+      display: block !important;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    /* 3. 保证 hero 本身正确 */
+    .hero {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+      background: none !important;
+    }
+
+    /* 4. 文字和遮罩在视频上面 */
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* ===== LOGO CLARITY FIX ===== */
+
+    .brand img {
+      filter: none !important;
+      opacity: 1 !important;
+
+      /* subtle professional shadow, not dark */
+      filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.15)) !important;
+    }
+  </style>
+
+  <!-- JavaScript to Toggle the Hamburger Menu -->
+
+
+  <!-- HERO -->
+  <!-- HERO -->
+  <!-- HERO -->
+  <section class="hero">
+    <!-- Video Background -->
+    <video class="hero-video" autoplay muted loop playsinline preload="metadata">
+      <source src="8381319-uhd_3840_2160_25fps.mp4" type="video/mp4">
+    </video>
+
+    <!-- Overlay -->
+    <div class="hero-overlay"></div>
+
+    <style>
+      /* ===== PREMIUM HERO GLASS CARD ===== */
+      .hero-glass-card {
+        background: rgba(12, 15, 20, 0.6);
+        backdrop-filter: blur(18px) saturate(120%);
+        -webkit-backdrop-filter: blur(18px) saturate(120%);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 64px;
+        border-radius: 28px;
+        max-width: 740px;
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+        transform: translateY(20px);
+        animation: floatUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        opacity: 0;
+      }
+
+      @keyframes floatUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .hero-glass-card .badge {
+        display: inline-block;
+        padding: 6px 16px;
+        background: rgba(255, 255, 255, 0.1);
+        color: #e5e5e5;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        border-radius: 50px;
+        margin-bottom: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .hero-glass-card h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 58px;
+        font-weight: 500;
+        color: #ffffff !important;
+        line-height: 1.15;
+        margin-bottom: 24px;
+        letter-spacing: -0.5px;
+      }
+
+      .hero-glass-card p {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.85) !important;
+        line-height: 1.75;
+        margin-bottom: 40px;
+      }
+
+      .hero-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 18px 40px;
+        background: #ffffff;
+        color: #111111;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      }
+
+      .hero-btn:hover {
+        background: #f1f1f1;
+        transform: translateY(-2px);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+        color: #111111;
+      }
+
+      @media (max-width: 900px) {
+        .hero-glass-card {
+          padding: 40px 24px;
+        }
+
+        .hero-glass-card h1 {
+          font-size: 40px;
+        }
+      }
+    </style>
+
+    <!-- Content -->
+    <div class="container hero-content">
+      <div class="hero-glass-card">
+        <div class="badge">Innovation & Precision</div>
+        <h1>Terumo Corporation</h1>
+        <p>
+          A major Japanese medical device manufacturer whose products include catheters, cardiovascular systems, blood
+          transfusion-related devices, and diabetes care solutions. The company has a long-standing presence in the
+          United States, with multiple subsidiaries and offices across North America.
+        </p>
+        <a href="#about" class="hero-btn">Discover Our Legacy</a>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- PROFILE -->
+  <section id="about" class="hero-profile reveal">
+
+    <div class="hero-profile-inner">
+
+      <!-- Left Image -->
+      <div class="hero-profile-image">
+        <img src="image/terumo_about.png" alt="About Terumo Corporation">
+      </div>
+
+
+      <!-- Right Content -->
+      <div class="hero-profile-content">
+        <h2>About Us</h2>
+        <p>
+          A major Japanese medical device manufacturer whose products include catheters, cardiovascular systems, blood
+          transfusion-related devices, and diabetes care solutions. The company has a long-standing presence in the
+          United States, with multiple subsidiaries and offices across North America.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LEADERSHIP & ADVISORY -->
+  <section class="clinical-section">
+    <div class="clinical-wrapper">
+
+      <!-- LEFT: IMAGE -->
+      <div class="clinical-image">
+        <img src="image/leader.jpg" alt="Leadership & Board Advisory">
+      </div>
+
+      <!-- RIGHT: CONTENT -->
+      <div class="clinical-text">
+        <h2>Leadership & Board Advisory</h2>
+
+        <p>
+          At Terumo Corporation, our Leadership and Board Advisory team is dedicated to guiding the global advancement of medical technology. As a cornerstone of healthcare innovation, we ensure that every strategic decision is rooted in our mission of "Contributing to Society through Healthcare."
+        </p>
+
+        <p>
+          Our advisory framework provides strategic oversight across our cardiovascular, blood management, and vascular intervention divisions. We aim to support hospitals and medical institutions in transitioning toward modern medical infrastructure, while maintaining the highest standards of safety and operational efficiency for the benefit of patients worldwide.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="team" class="key-figures-section">
+
+    <h2 class="key-figures-title">Our Team</h2>
+
+    <!-- STEPHANIE (PRIMARY) -->
+    <div class="key-figure primary">
+
+      <img src="image/photo_2026-05-05_08-20-32.jpg" alt="Stephanie Landan">
+
+      <div class="figure-content">
+        <h3>Stephanie Landan</h3>
+        <p class="role">Chief Executive Officer (CEO)</p>
+
+        <p class="bio">
+          Stephanie Landan is the Chief Executive Officer (CEO) of Terumo Corporation, providing strategic leadership 
+          across healthcare innovation, cross-border clinical integration, and long-term institutional growth.
+        </p>
+
+        <p class="bio">
+          She brings an executive's perspective shaped by international education and early exposure to global markets. 
+          Her academic experience at Pittsburgh Business School laid the groundwork for a disciplined approach to strategy, 
+          branding, and organizational development, which continues to influence her leadership philosophy and long-term 
+          vision for Terumo Corporation.
+        </p>
+
+        <p class="bio">
+          Under her direction, Terumo Corporation has expanded its international presence, strengthened governance frameworks, 
+          and positioned itself at the intersection of clinical excellence and sustainable healthcare investment.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- SECONDARY FIGURES -->
+    <div class="team-grid">
+      <div class="key-figure secondary">
+        <img src="1778009722.png" alt="Julian Vance">
+        <div class="figure-content">
+          <h3>Julian Vance</h3>
+          <p class="role">Chief Operating Officer</p>
+          <p class="bio">
+            Julian Vance serves as Chief Operating Officer, steering the company’s operational framework and executing
+            strategic initiatives across all clinical and administrative functions. He brings extensive expertise in
+            optimizing supply chain logistics and enhancing cross-functional collaboration. Julian ensures that daily
+            operations run seamlessly, adapting processes to meet evolving regulatory standards while maintaining a
+            strong focus on organizational alignment and reliable service delivery.
+          </p>
+        </div>
+      </div>
+
+      <div class="key-figure secondary">
+        <img src="1778087028.png" alt="Elena Mercer">
+        <div class="figure-content">
+          <h3>Elena Mercer</h3>
+          <p class="role">Chief Financial Officer</p>
+          <p class="bio">
+            Elena Mercer is the Chief Financial Officer, directing financial strategy, corporate budgeting, and robust
+            internal governance. She takes charge of maintaining fiscal discipline and transparency across all
+            organizational tiers, enabling data-driven operational decisions. By partnering closely with executive
+            leadership, Elena builds sustainable financial structures that secure long-term growth and ensure full
+            compliance within complex international markets.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- OUR PRODUCTS -->
+  <section id="products" class="products-section reveal">
+    <div class="products-container">
+
+      <h2 class="products-title">Our Products</h2>
+
+      <div class="products-grid">
+
+        <div class="product-card" data-title="Angio-Seal™ Vascular Closure Device"
+          data-desc="Product Description: The Angio-Seal™ Vascular Closure Device is an active closure device designed to provide rapid and reliable hemostasis at the femoral artery puncture site following catheterization procedures. Its innovative design ensures quick sealing, promoting early patient ambulation and reducing complications."
+          data-images="Angio-Seal.png">
+          <img src="Angio-Seal.png" alt="Angio-Seal™ Vascular Closure Device">
+          <h3>Angio-Seal™ Vascular Closure</h3>
+        </div>
+
+        <div class="product-card" data-title="SurFlash® Polyurethane IV Catheter"
+          data-desc="Product Description: SurFlash® is an advanced polyurethane IV catheter featuring unique flashback technology. It provides immediate visual confirmation of successful venipuncture, enhancing precision for clinicians and improving patient comfort during intravenous therapy."
+          data-images="SurFlash.jpg">
+          <img src="SurFlash.jpg" alt="SurFlash® Polyurethane IV Catheter">
+          <h3>SurFlash® IV Catheter</h3>
+        </div>
+
+        <div class="product-card" data-title="PLAJEX™ Pre-fillable Syringe"
+          data-desc="Product Description: PLAJEX™ is a ready-to-use pre-fillable syringe system made of cyclic olefin polymer. Specially designed for sensitive biopharmaceuticals, it reduces protein aggregation and eliminates the need for silicone oil, ensuring safe and highly efficient drug delivery."
+          data-images="PLAJEX.jpg">
+          <img src="PLAJEX.jpg" alt="PLAJEX™ Pre-fillable Syringe">
+          <h3>PLAJEX™ Pre-fillable Syringe</h3>
+        </div>
+
+        <div class="product-card" data-title="CDI™ Blood Parameter Monitoring"
+          data-desc="Product Description: The CDI™ Blood Parameter Monitoring System offers continuous, inline monitoring of vital blood parameters during cardiopulmonary bypass procedures. By providing real-time data, it ensures optimal perfusion management and significantly enhances patient safety during surgery."
+          data-images="CDI.png">
+          <img src="CDI.png" alt="CDI™ Blood Parameter Monitoring">
+          <h3>CDI™ Blood Monitoring</h3>
+        </div>
+
+        <div class="product-card" data-title="GLIDESHEATH SLENDER®"
+          data-desc="Product Description: GLIDESHEATH SLENDER® is an ultra-thin walled introducer sheath designed specifically for transradial access. It combines a smaller outer profile with a larger inner diameter, minimizing arterial trauma and allowing for complex interventions through smaller access sites."
+          data-images="GLIDESHEATH.png">
+          <img src="GLIDESHEATH.png" alt="GLIDESHEATH SLENDER®">
+          <h3>GLIDESHEATH SLENDER®</h3>
+        </div>
+
+        <div class="product-card" data-title="TR Band® Radial Compression"
+          data-desc="Product Description: The TR Band® is a clear, inflatable compression device utilized to achieve precise hemostasis of the radial artery following transradial procedures. Its transparent design allows for continuous site visibility while preserving radial artery patency."
+          data-images="TRBand.jpg">
+          <img src="TRBand.jpg" alt="TR Band® Radial Compression">
+          <h3>TR Band® Radial Compression</h3>
+        </div>
+
+        <div class="product-card" data-title="Terumo® Advanced Infusion Pump"
+          data-desc="Product Description: The Terumo® Advanced Infusion Pump System provides highly accurate and safe fluid delivery. Featuring an intuitive digital interface and robust safety mechanisms, it is perfectly suited for critical care environments where precision and reliability are paramount."
+          data-images="TerumoAdvancedInfusionPump.png">
+          <img src="TerumoAdvancedInfusionPump.png" alt="Terumo® Advanced Infusion Pump">
+          <h3>Terumo® Infusion Pump</h3>
+        </div>
+
+        <div class="product-card" data-title="CAPIOX® Cardiopulmonary Oxygenator"
+          data-desc="Product Description: The CAPIOX® Cardiopulmonary Oxygenator is a state-of-the-art gas exchange device essential for open-heart surgery. It is renowned globally for its excellent biocompatibility, low prime volume, and highly efficient oxygen transfer capabilities."
+          data-images="CAPIOX.jpg">
+          <img src="CAPIOX.jpg" alt="CAPIOX® Cardiopulmonary Oxygenator">
+          <h3>CAPIOX® Oxygenator</h3>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT MODAL -->
+  <div class="product-modal" id="productModal">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close">&times;</button>
+
+      <img class="modal-main-image" id="modalMainImage" alt="">
+      <h3 class="modal-title" id="modalTitle"></h3>
+      <p class="modal-description" id="modalDesc"></p>
+
+      <div class="modal-gallery" id="modalGallery"></div>
+    </div>
+  </div>
+
+
+  <!-- INDUSTRY PERSPECTIVE -->
+  <section class="hero-industry-wow reveal">
+    <div class="container">
+      <div class="hero-industry-card">
+        <h2>Industry Perspective</h2>
+        <p>
+          The global medical device industry is undergoing a profound transformation driven by precision engineering and digital integration. At Terumo Corporation, we view cross-border innovation not just as a business expansion, but as a commitment to enhancing patient outcomes through stable supply chains and regulatory excellence. Our perspective is built on a century of leadership in cardiovascular and hospital solutions, where we harmonize medical technology with the evolving demands of clinical environments. Sustainable value in this sector is created through the systematic alignment of high-quality product design, ethical distribution, and long-term institutional partnerships.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- EDUCATION & CAREER -->
+  <section id="professional" class="section reveal professional">
+
+    <div class="focus-card">
+      <h2>Professional Focus</h2>
+      <p>
+        At Terumo Corporation, our professional focus is dedicated to advancing the boundaries of medical intervention and patient safety. We specialize in four core pillars of clinical excellence: Cardiovascular Systems, including advanced bypass and monitoring technologies; Vascular Intervention products for minimally invasive therapy; Blood Management solutions that ensure a safe and stable supply; and General Hospital products that optimize daily care delivery. By integrating these specialized systems with advanced clinical data, we continue to develop comprehensive platforms that enhance surgical precision and diagnostic accuracy, ensuring high-quality care across our global healthcare networks.
+      </p>
+    </div>
+  </section>
+
+  <!-- ORIGIN -->
+  <section id="background" class="background-section">
+    <div class="background-grid">
+
+      <!-- Background Narrative -->
+      <div class="background-card">
+        <h2>Background Narrative</h2>
+        <p>
+          My path has been shaped by working across international business, healthcare,
+          and investment, with a consistent focus on how platforms are built, integrated,
+          and scaled globally. Experience operating in regulated industries revealed
+          the limits of isolated ventures and underscored the importance of systems,
+          execution, and long-term ownership. Over time, this perspective evolved into a
+          disciplined approach to building sustainable enterprises where strategy,
+          capital, and operations align to create durable value.
+        </p>
+      </div>
+
+      <!-- Professional Experience -->
+      <div class="background-card">
+        <h2>Professional Experience</h2>
+
+        <div class="experience-item">
+          <strong>International Business, Healthcare & Medical Technology</strong><br>
+          <span class="experience-period">(2016–Present)</span>
+          <p>
+            Building and scaling global platforms across healthcare and regulated
+            industries, integrating capital strategy, operational execution, and
+            long-term ownership across global markets.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- EDUCATION -->
+  <section id="education" class="education reveal">
+    <h2 class="education-title">Education</h2>
+
+    <div class="education-card">
+      <p>
+        Stephanie Landan received her education at Pittsburgh Business School, where she established a strong
+        foundation in marketing and business management. Through advanced commercial training at Pittsburgh Business
+        School,
+        she developed the strategic expertise and market acumen that continue to guide her work in scaling global
+        platforms.
+      </p>
+    </div>
+  </section>
+
+
+
+  <!-- PHILOSOPHY -->
+  <section class="clinical-section">
+    <div class="clinical-wrapper">
+
+      <!-- LEFT: IMAGE -->
+      <div class="clinical-image">
+        <img src="image/terumo_clinical.png" alt="Clinical Projects & Initiatives">
+      </div>
+
+      <!-- RIGHT: CONTENT -->
+      <div class="clinical-text">
+        <h2>
+          Clinical Projects &<br>
+          Initiatives
+        </h2>
+
+        <p>
+          Design and leadership of strategic initiatives supporting healthcare-adjacent
+          and commercial programs, integrating market insight, brand strategy, and
+          cross-functional execution into scalable operating models.
+        </p>
+
+        <p>
+          Projects span market expansion, strategic partnerships, and organizational
+          development, with a focus on long-term value creation, stakeholder alignment,
+          and sustainable growth.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SELECTED PUBLICATIONS & RESEARCH -->
+  <section class="section reveal publications">
+    <div class="focus-card publications-layout">
+
+      <!-- LEFT: TEXT -->
+      <div class="publications-text">
+        <h2>Selected Publications & Research</h2>
+
+        <ul class="research-list">
+          <li>Applied research and analytical work focused on cross-border healthcare platforms, medical trade systems,
+            and regulated market structures</li>
+          <li>Market and operational studies supporting healthcare-adjacent businesses, including medical device
+            distribution, consumer health, and clinical service platforms</li>
+          <li>Strategic analysis on technology integration, including AI-assisted data evaluation and decision-support
+            tools within healthcare and international business contexts</li>
+        </ul>
+      </div>
+
+      <!-- RIGHT: IMAGE -->
+      <div class="publications-image">
+        <img src="image/professional.jpg" alt="Research environment">
+      </div>
+
+    </div>
+  </section>
+
+  <section id="blog" class="blog-section">
+    <h2 class="blog-title">Latest Posts</h2>
+
+    <div class="blog-grid">
+
+      <a href="blog.html?id=1" class="blog-card">
+        <img src="image/blog1.png" alt="Improving Patient Monitoring">
+        <div class="blog-content">
+          <span class="blog-date">2021-06-22</span>
+          <h3>Improving Patient Monitoring and Diagnostics</h3>
+        </div>
+      </a>
+
+      <a href="blog.html?id=2" class="blog-card">
+        <img src="image/blog2.png" alt="Minimally Invasive Surgery">
+        <div class="blog-content">
+          <span class="blog-date">2022-08-11</span>
+          <h3>Minimally Invasive Surgery with Robotic Assistance</h3>
+        </div>
+      </a>
+
+      <a href="blog.html?id=3" class="blog-card">
+        <img src="image/blog3.png" alt="Ensuring Patient Safety">
+        <div class="blog-content">
+          <span class="blog-date">2024-08-09</span>
+          <h3>Ensuring Patient Safety and Reducing Cross-Contamination</h3>
+        </div>
+      </a>
+
+      <a href="blog.html?id=4" class="blog-card">
+        <img src="image/blog4.png" alt="Eco-Friendly Medical Supplies">
+        <div class="blog-content">
+          <span class="blog-date">2025-09-05</span>
+          <h3>Eco-Friendly Innovations in Medical Supplies</h3>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- RECOGNITION -->
+  <section id="recognition" class="recognition-section reveal">
+    <div class="recognition-container">
+
+      <h2 class="recognition-title">Recognition</h2>
+
+      <!-- Item 1 -->
+      <div class="recognition-row">
+        <div class="recognition-text">
+          <h3>Strategic Healthcare Leadership Engagements</h3>
+          <p>
+            Recognized through participation in closed-door healthcare leadership
+            forums and executive discussions focused on precision medicine,
+            healthcare system design, and cross-border clinical integration.
+          </p>
+        </div>
+        <div class="recognition-image">
+          <img src="image/recog1.jpg" alt="Strategic Healthcare Leadership Engagements">
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="recognition-row">
+        <div class="recognition-text">
+          <h3>International Collaboration & Advisory Dialogues</h3>
+          <p>
+            Recognized through involvement in international advisory dialogues
+            addressing cross-border market coordination, organizational structure,
+            and strategic collaboration across healthcare and business ecosystems.
+          </p>
+        </div>
+        <div class="recognition-image">
+          <img src="image/recog2.jpg" alt="International Collaboration & Advisory Dialogues">
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="recognition-row">
+        <div class="recognition-text">
+          <h3>Philanthropy & Social Impact Initiatives</h3>
+          <p>
+            Recognized through engagement in healthcare philanthropy initiatives
+            supporting health education, system capacity building, and long-term
+            community impact across international contexts.
+          </p>
+        </div>
+        <div class="recognition-image">
+          <img src="image/recog3.jpg" alt="Philanthropy & Social Impact Initiatives">
+        </div>
+      </div>
+
+    </div> <!-- ✅ THIS WAS MISSING -->
+  </section>
+
+  <section id="insights" class="recognition-section reveal">
+
+    <section class="insights-section">
+      <div class="insights-grid">
+
+        <div class="insight-card">
+          <div class="icon-circle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#111827" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z" />
+              <path
+                d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z" />
+            </svg>
+          </div>
+          <h3>Industry Perspective</h3>
+          <p>
+            Dedicated to transforming scientific and clinical innovation into scalable healthcare systems through
+            governance design, data integration, and incentive infrastructure.
+          </p>
+        </div>
+
+        <div class="insight-card">
+          <div class="icon-circle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#111827" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+              <line x1="12" x2="12" y1="19" y2="22" />
+            </svg>
+          </div>
+          <h3>Speaking Engagements & Media</h3>
+          <p>
+            Regularly invited to address international medical and life sciences conferences, healthcare innovation
+            forums, and academic institutions, sharing insights on the future of integrated care.
+          </p>
+        </div>
+
+        <div class="insight-card">
+          <div class="icon-circle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#111827" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="7" />
+              <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+            </svg>
+          </div>
+          <h3>Awards & Honors</h3>
+          <p>
+            Honored with multiple academic and professional accolades acknowledging contributions to translational
+            research, clinical leadership, and strategic healthcare innovation.
+          </p>
+        </div>
+
+        <div class="insight-card">
+          <div class="icon-circle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#111827" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="2" x2="22" y1="12" y2="12" />
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+            </svg>
+          </div>
+          <h3>Professional Affiliations</h3>
+          <p>
+            Maintain active leadership roles within prominent international medical, scientific, and healthcare
+            organizations, driving cross-border collaboration across Asia and Europe.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="contact-container">
+
+        <!-- LEFT SIDE -->
+        <div class="contact-info">
+          <h2>Contact</h2>
+
+          <div class="info-block">
+            <span class="label">EMAIL</span>
+            <p>&nbsp;</p>
+          </div>
+
+          <div class="info-block">
+            <span class="label">PHONE</span>
+            <p>&nbsp;</p>
+          </div>
+
+          <div class="info-block">
+            <span class="label">OFFICE ADDRESS</span>
+            <p>&nbsp;</p>
+          </div>
+
+          <div class="map-wrapper">
+            <iframe src="https://www.google.com/maps?q=285+Fulton+St,+New+York,+NY+10007&output=embed" width="100%"
+              height="280" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="contact-form-card">
+          <form>
+            <label>Name</label>
+            <input type="text" placeholder="Your Name" />
+
+            <label>Email</label>
+            <input type="email" placeholder="Your Email" />
+
+            <label>Message</label>
+            <textarea rows="5" placeholder="Your Message"></textarea>
+
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+
+    <style>
+      /* Formal Footer Compliance - Centered & Stacked */
+      .site-footer {
+        background-color: #f9fafb;
+        border-top: 1px solid rgba(0, 0, 0, 0.06);
+        padding: 60px 24px;
+        font-family: "Inter", sans-serif;
+        margin-top: 80px;
+      }
+
+      .footer-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+        text-align: center;
+      }
+
+      .footer-copyright {
+        color: #9ca3af;
+        font-size: 13px;
+        letter-spacing: 0.02em;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+      }
+
+      .footer-links a {
+        display: block;
+        color: #585e68;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        transition: color 0.2s ease;
+      }
+
+      .footer-links a:hover {
+        color: #1a1a1a;
+      }
+
+      /* ===== FIX: HIDE HAMBURGER ON DESKTOP ===== */
+      .menu-icon {
+        display: none !important;
+      }
+
+      /* ONLY show hamburger on mobile */
+      @media (max-width: 900px) {
+        .menu-icon {
+          display: block !important;
+        }
+      }
+
+      /* ===== MOBILE TYPOGRAPHY UNIFICATION ===== */
+      @media (max-width: 900px) {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        .hero-content,
+        .hero-profile-content,
+        .clinical-text,
+        .background-card,
+        .education-card,
+        .focus-card,
+        .hero-industry-card,
+        .figure-content,
+        .blog-content,
+        .insight-card,
+        .recognition-text,
+        .contact-info {
+          text-align: center !important;
+        }
+
+        /* Buttons / form elements center */
+        button,
+        input,
+        textarea {
+          text-align: center;
+        }
+
+        /* Reduce awkward wide padding */
+        .container,
+        .hero-content {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+    </style>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-copyright">
+          &copy; 2026 Terumo Corporation. All rights reserved.
+        </div>
+        <div class="footer-links">
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+          <a href="#">Intellectual Property</a>
+          <a href="#">Imprint</a>
+        </div>
+      </div>
+    </footer>
+
+
+    <script>
+      const obs = new IntersectionObserver(e => {
+        e.forEach(x => x.isIntersecting && x.target.classList.add("show"))
+      }, { threshold: .15 });
+      document.querySelectorAll(".reveal").forEach(el => obs.observe(el));
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const fadeElements = document.querySelectorAll(".fade-in");
+
+        const observer = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+                observer.unobserve(entry.target); // animate once
+              }
+            });
+          },
+          {
+            threshold: 0.2
+          }
+        );
+
+        fadeElements.forEach(el => observer.observe(el));
+      });
+    </script>
+    <script>
+      const reveals = document.querySelectorAll(".reveal");
+
+
+      const observer = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+            }
+          });
+        },
+        {
+          threshold: 0.15
+        }
+      );
+
+      reveals.forEach(section => {
+        observer.observe(section);
+      });
+    </script>
+    <div class="product-modal" id="productModal">
+      <div class="modal-content">
+        <span class="modal-close">&times;</span>
+
+        <img id="modalMainImage" class="modal-main-image">
+        <h3 id="modalTitle"></h3>
+        <p id="modalDesc"></p>
+
+        <div class="modal-gallery" id="modalGallery"></div>
+      </div>
+    </div>
+
+    <script>
+      const modal = document.getElementById("productModal");
+      const modalTitle = document.getElementById("modalTitle");
+      const modalDesc = document.getElementById("modalDesc");
+      const modalMainImage = document.getElementById("modalMainImage");
+      const modalGallery = document.getElementById("modalGallery");
+
+      document.querySelectorAll(".product-card").forEach(card => {
+        card.addEventListener("click", () => {
+          const images = card.dataset.images.split(",");
+          modalTitle.textContent = card.dataset.title;
+          modalDesc.textContent = card.dataset.desc;
+          modalMainImage.src = images[0];
+
+          modalGallery.innerHTML = "";
+          images.forEach(img => {
+            const thumb = document.createElement("img");
+            thumb.src = img;
+            thumb.onclick = () => modalMainImage.src = img;
+            modalGallery.appendChild(thumb);
+          });
+
+          modal.classList.add("show");
+        });
+      });
+
+      document.querySelector(".modal-close").onclick = () =>
+        modal.classList.remove("show");
+
+      modal.onclick = e => {
+        if (e.target === modal) modal.classList.remove("show");
+      };
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuIcon = document.getElementById("menu-icon");
+        const menu = document.querySelector(".menu");
+
+        // 页面加载时，确保菜单关闭
+        menu.classList.remove("menu-open");
+
+        // 点击 ☰ 打开 / 关闭
+        menuIcon.addEventListener("click", () => {
+          menu.classList.toggle("menu-open");
+        });
+
+        // 点击菜单项后自动关闭
+        menu.querySelectorAll("a").forEach(link => {
+          link.addEventListener("click", () => {
+            menu.classList.remove("menu-open");
+          });
+        });
+      });
+    </script>
+
+    </body>
+
+  </html>

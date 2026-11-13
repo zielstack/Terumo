@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+      margin: 0;
+      padding: 40px;
+    }
+
+    .page-layout {
+      display: flex;
+      gap: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* MAIN BLOG */
+    .blog-container {
+      flex: 3;
+    }
+
+    .blog-container img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .blog-date {
+      color: #2563eb;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #333;
+      white-space: pre-line;
+    }
+
+    /* SIDEBAR */
+    .blog-sidebar {
+      flex: 1;
+      position: sticky;
+      top: 120px;
+      height: fit-content;
+    }
+
+    .sidebar-box {
+      background: #f8fbff;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+    }
+
+    .sidebar-box h3 {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .category-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .category-list li {
+      margin-bottom: 10px;
+    }
+
+    .category-list a {
+      text-decoration: none;
+      color: #2563eb;
+      font-size: 14px;
+    }
+
+    .category-list a.active {
+      font-weight: bold;
+      color: #1d4ed8;
+    }
+
+    .category-list a.active::before {
+      content: "— ";
+    }
+
+    /* LATEST POSTS */
+    .latest-post {
+      display: flex;
+      gap: 10px;
+      text-decoration: none;
+      color: #000;
+      margin-bottom: 15px;
+      padding: 8px;
+      border-radius: 8px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .latest-post img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .latest-post h5 {
+      font-size: 14px;
+      margin: 0;
+      transition: color 0.2s ease;
+    }
+
+    .latest-post span {
+      font-size: 12px;
+      color: #666;
+    }
+
+    .latest-post:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      background: #fff;
+    }
+
+    .latest-post:hover h5 {
+      color: #2563eb;
+    }
+
+    /* MOBILE */
+    @media (max-width: 900px) {
+      .page-layout {
+        flex-direction: column;
+      }
+
+      .blog-sidebar {
+        position: static;
+        margin-top: 40px;
+      }
+    }
+
+    .blog-sidebar {
+  margin-top: 40px; /* aligns with image top */
+}
+.sidebar-box {
+  background: #f8fbff;
+  padding: 24px;
+  border-radius: 16px;
+}
+.sidebar-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e5ecf6;
+  position: relative;
+}
+
+.sidebar-title::before {
+  content: "—";
+  color: #2563eb;
+  margin-right: 8px;
+}
+.category-list.styled li {
+  margin-bottom: 14px;
+}
+
+.category-list.styled a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #1e293b;
+  text-decoration: none;
+}
+
+.category-list.styled a::before {
+  content: "›";
+  color: #2563eb;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.category-list.styled a:hover {
+  color: #2563eb;
+}
+.latest-post {
+  display: flex;
+  gap: 12px;
+  padding: 10px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #000;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.latest-post:hover {
+  background: #ffffff;
+  transform: translateY(-2px);
+}
+.latest-post {
+  display: flex;
+  gap: 12px;
+  padding: 10px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #000;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.latest-post:hover {
+  background: #ffffff;
+  transform: translateY(-2px);
+}
+html {
+  scroll-behavior: smooth;
+}
+.blog-close {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 26px;
+  line-height: 44px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.blog-close:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+  </style>
+</head>
+
+<body>
+
+<button class="blog-close" onclick="history.back()">×</button>
+<div class="page-layout">
+
+  <!-- MAIN BLOG -->
+  <div class="blog-container" id="blogContent"></div>
+
+  <!-- SIDEBAR -->
+  <aside class="blog-sidebar">
+
+   <div class="sidebar-box">
+  <h3 class="sidebar-title">Categories</h3>
+ <ul class="category-list">
+  <li><a href="index.html#about">About Us</a></li>
+  <li><a href="index.html#products">Products</a></li>
+  <li><a href="index.html#team">Team</a></li>
+  <li><a href="index.html#blog">Blog</a></li>
+  <li><a href="index.html#contact">Contact Us</a></li>
+</ul>
+
+
+
+    <div class="sidebar-box">
+      <h3>Latest Posts</h3>
+      <div id="latestPosts"></div>
+    </div>
+
+  </aside>
+
+</div>
+
+<script>
+const blogs = {
+  1: {
+    img: "image/blog1.png",
+    title: "Improving Patient Monitoring and Diagnostics",
+    date: "2021-06-22",
+    content: `
+The integration of smart technology into medical equipment has revolutionized patient care. Devices equipped with IoT (Internet of Things) and AI (Artificial Intelligence) are enabling real-time data collection and analysis, improving diagnostics and patient monitoring.
+
+For instance, smart monitors can track vital signs continuously and alert medical staff in real-time if a patient’s condition deteriorates. This helps in reducing response times and enhancing the accuracy of diagnosis. Our advanced monitoring systems provide reliable, accurate data that empowers healthcare professionals to make informed decisions swiftly.
+`
+  },
+
+  2: {
+    img: "image/blog2.png",
+    title: "Minimally Invasive Surgery with Robotic Assistance",
+    date: "2022-08-11",
+    content: `
+Surgical procedures have become more precise and less invasive, thanks to innovations in medical devices like robotic surgery tools. These tools allow surgeons to perform complex operations with greater accuracy, resulting in faster recovery times and reduced complications for patients.
+
+Our range of surgical equipment is designed with cutting-edge technology that aids in precision, reducing human error, and enhancing patient outcomes. With robotic assistance and enhanced visualization, surgeons can now achieve better results, even in high-risk procedures.
+`
+  },
+
+  3: {
+    img: "image/blog3.png",
+    title: "Ensuring Patient Safety and Reducing Cross-Contamination",
+    date: "2024-08-09",
+    content: `
+In the fast-paced environment of hospitals, having access to high-quality consumables is crucial. Disposable items like syringes, surgical gloves, and drapes play a significant role in maintaining hygiene and preventing infections.
+
+We manufacture a wide range of consumables that meet the highest standards of quality and safety. Our products are designed to minimize the risk of cross-contamination and ensure that hospitals can provide the best possible care for their patients.
+`
+  },
+
+  4: {
+    img: "image/blog4.png",
+    title: "Eco-Friendly Innovations in Medical Supplies",
+    date: "2025-09-05",
+    content: `
+Sustainability is becoming an essential factor in healthcare, as hospitals and healthcare providers seek to reduce their environmental footprint. This shift has led to the development of eco-friendly hospital consumables made from biodegradable or recyclable materials.
+
+We are proud to be part of this movement, offering sustainable solutions that do not compromise on quality or safety. From biodegradable gloves to reusable surgical instruments, our eco-friendly products help hospitals meet their sustainability goals while maintaining patient care standards.
+`
+  }
+};
+
+// Load current blog
+const params = new URLSearchParams(window.location.search);
+const currentId = params.get("id") || "1";
+
+if (blogs[currentId]) {
+  document.getElementById("blogContent").innerHTML = `
+    <img src="${blogs[currentId].img}">
+    <div class="blog-date">— ${blogs[currentId].date}</div>
+    <h1>${blogs[currentId].title}</h1>
+    <p>${blogs[currentId].content}</p>
+  `;
+}
+
+// Latest posts
+const latestContainer = document.getElementById("latestPosts");
+
+Object.entries(blogs).forEach(([id, blog]) => {
+  if (id !== currentId) {
+    latestContainer.innerHTML += `
+      <a href="blog.html?id=${id}" class="latest-post">
+        <img src="${blog.img}">
+        <div>
+          <h5>${blog.title}</h5>
+          <span>${blog.date}</span>
+        </div>
+      </a>
+    `;
+  }
+});
+</script>
+
+</body>
+</html>
